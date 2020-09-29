@@ -3,6 +3,19 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/IDE_G404.iml" filepath="$PROJECT_DIR$/.idea/IDE_G404.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SimpleChat.iml" filepath="$PROJECT_DIR$/.idea/modules/SimpleChat.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/clients/SimpleChat.clients.iml" filepath="$PROJECT_DIR$/.idea/modules/clients/SimpleChat.clients.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/clients/console/SimpleChat.clients.console.iml" filepath="$PROJECT_DIR$/.idea/modules/clients/console/SimpleChat.clients.console.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/clients/console/SimpleChat.clients.console.main.iml" filepath="$PROJECT_DIR$/.idea/modules/clients/console/SimpleChat.clients.console.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/clients/console/SimpleChat.clients.console.test.iml" filepath="$PROJECT_DIR$/.idea/modules/clients/console/SimpleChat.clients.console.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/clients/SimpleChat.clients.main.iml" filepath="$PROJECT_DIR$/.idea/modules/clients/SimpleChat.clients.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/clients/SimpleChat.clients.test.iml" filepath="$PROJECT_DIR$/.idea/modules/clients/SimpleChat.clients.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/SimpleChat.common.iml" filepath="$PROJECT_DIR$/.idea/modules/common/SimpleChat.common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/SimpleChat.common.main.iml" filepath="$PROJECT_DIR$/.idea/modules/common/SimpleChat.common.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/SimpleChat.common.test.iml" filepath="$PROJECT_DIR$/.idea/modules/common/SimpleChat.common.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/server/SimpleChat.server.iml" filepath="$PROJECT_DIR$/.idea/modules/server/SimpleChat.server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/server/SimpleChat.server.main.iml" filepath="$PROJECT_DIR$/.idea/modules/server/SimpleChat.server.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/server/SimpleChat.server.test.iml" filepath="$PROJECT_DIR$/.idea/modules/server/SimpleChat.server.test.iml" />
     </modules>
   </component>
 </project>

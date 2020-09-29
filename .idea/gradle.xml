@@ -1,25 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="GradleSettings">
-    <option name="linkedExternalProjectsSettings">
-      <GradleProjectSettings>
-        <option name="distributionType" value="DEFAULT_WRAPPED" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/SimpleChat" />
-        <option name="gradleJvm" value="13" />
-        <option name="modules">
-          <set>
-            <option value="$PROJECT_DIR$/SimpleChat" />
-            <option value="$PROJECT_DIR$/SimpleChat/clients" />
-            <option value="$PROJECT_DIR$/SimpleChat/clients/console" />
-            <option value="$PROJECT_DIR$/SimpleChat/common" />
-            <option value="$PROJECT_DIR$/SimpleChat/server" />
-          </set>
-        </option>
-<<<<<<< HEAD
-=======
-        <option name="useQualifiedModuleNames" value="true" />
->>>>>>> f2e2d8b31e6cd1c312b0fd4c86730ea128997b4d
-      </GradleProjectSettings>
-    </option>
-  </component>
+  <component name="GradleMigrationSettings" migrationVersion="1" />
 </project>
