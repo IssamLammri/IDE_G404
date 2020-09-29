@@ -15,6 +15,10 @@
             <option value="$PROJECT_DIR$/SimpleChat/server" />
           </set>
         </option>
+<<<<<<< HEAD
+=======
+        <option name="useQualifiedModuleNames" value="true" />
+>>>>>>> f2e2d8b31e6cd1c312b0fd4c86730ea128997b4d
       </GradleProjectSettings>
     </option>
   </component>
