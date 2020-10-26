@@ -132,14 +132,16 @@ public class ChatServer<T> implements UserAlgo, ChatroomAlgo<T>, MessageAlgo<T>,
                     Thread.sleep(100); // check every 100ms
                     // avoid removing instances during the iteration - store members to update
                     final Collection<UserInfo> usersToUpdate = new HashSet<>();
-                    chatInstance.getUsers().forEach( (user, time) -> {
-                                if (user.getCurrentStatus() == Status.ACTIVE
-                                        && ChronoUnit.SECONDS.between(time, LocalDateTime.now()) > 2) {
-                                    user.setCurrentStatus(Status.INACTIVE);
-                                    usersToUpdate.add(user);
+                    if(chatInstance.getUsers() != null){
+                        chatInstance.getUsers().forEach( (user, time) -> {
+                                    if (user.getCurrentStatus() == Status.ACTIVE
+                                            && ChronoUnit.SECONDS.between(time, LocalDateTime.now()) > 2) {
+                                        user.setCurrentStatus(Status.INACTIVE);
+                                        usersToUpdate.add(user);
+                                    }
                                 }
-                            }
-                    );
+                        );
+                    }
                     usersToUpdate.forEach(this::notifyUserChange);
                 } catch (InterruptedException e) {
                     // interrupted
@@ -148,9 +150,7 @@ public class ChatServer<T> implements UserAlgo, ChatroomAlgo<T>, MessageAlgo<T>,
             }
         }
         );
-
         this.checkIdleClients.start();
-
     }
 
     @Override
@@ -282,6 +282,8 @@ public class ChatServer<T> implements UserAlgo, ChatroomAlgo<T>, MessageAlgo<T>,
 
         /* maybe I should notify clients about the new chatroom ?? */
 
+        notifyNewChatroom(newChatroom);
+
         return newChatroomId;
     }
 
@@ -316,8 +318,9 @@ public class ChatServer<T> implements UserAlgo, ChatroomAlgo<T>, MessageAlgo<T>,
     @Override
     public Message<T> addMessage(int chatroomId, UserInfo user, T content) {
         Message<T> newMessage = getChatroom(chatroomId).addMessage(user, content);
-
+        notifyNewMessage(chatroomId,newMessage);
         // return new created message
+        return newMessage;
     }
 
     /**
@@ -326,9 +329,11 @@ public class ChatServer<T> implements UserAlgo, ChatroomAlgo<T>, MessageAlgo<T>,
     @Override
     public Message<T> notifyNewMessage(int chatroomId, Message<T> newMessage) {
 
-        clientNotifiers.forEach(
-                client -> client.notifyNewMessage(chatroomId, newMessage)
-        );
+        if(clientNotifiers != null){
+            clientNotifiers.forEach(
+                    client -> client.notifyNewMessage(chatroomId, newMessage)
+            );
+        }
         return newMessage;
     }
 

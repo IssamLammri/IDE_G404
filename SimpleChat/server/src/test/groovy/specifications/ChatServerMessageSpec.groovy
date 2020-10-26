@@ -13,7 +13,7 @@ class ChatServerMessageSpec extends Specification {
         def server = new ChatServer(ChatInstance.initEmptyChat(), null, null)
 
         and: "A chatroom"
-        int chatroomId = server.addChatroom(null, null)
+        int chatroomId = server.addChatroom("A chatroom", null)
 
         when: "A new message is created in the Chatroom"
         server.addMessage(chatroomId, null, "Test message")
@@ -36,7 +36,7 @@ class ChatServerMessageSpec extends Specification {
         def server = new ChatServer(ChatInstance.initEmptyChat(), [clientNotifier], null)
 
         and: "A chatroom"
-        int chatroomId = server.addChatroom(null, null)
+        int chatroomId = server.addChatroom("A chatroom", null)
 
         when: "A new message is added"
         server.addMessage(chatroomId, null, "Test message")
